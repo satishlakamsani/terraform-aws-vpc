@@ -50,7 +50,36 @@ variable "database_subnet_cidrs"{
 }
 
 variable "database_subnet_tags"{
-    default = {
+    default = {}
     type = map
-    }
+    
+}
+
+variable "public_route_table_tags"{
+    default = {}
+    type = map
+}
+variable "private_route_table_tags"{
+    default = {}
+    type = map
+}
+
+variable "database_route_table_tags"{
+    default = {}
+    type = map
+}
+
+variable "eip_tags" {
+    default = {}
+    type = map
+}
+
+variable "nat_gateway_tags"{
+    default = {}
+    type = map
+}
+
+variable "is_peering_required"{
+    default = false 
+    type = bool
 }
